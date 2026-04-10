@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SafeEntry</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <div class="logo">SafeEntry</div>
+  <nav>
+    <a onclick="scrollToSection('home')">Home</a>
+    <a onclick="scrollToSection('services')">Services</a>
+    <a onclick="scrollToSection('account')">Login</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero fade">
+  <div class="glass">
+    <h1>SafeEntry</h1>
+    <p>Know who enters. Know when they leave. Every time.</p>
+    <button onclick="scrollToSection('services')">Explore Services</button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features fade">
+  <h2>Why SafeEntry Matters</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🔐 Verified Workers</h3>
+      <p>Aadhaar + background checked professionals only</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>📍 Live Tracking</h3>
+      <p>Monitor entry, exit, and real-time movement</p>
+    </div>
+
+    <div class="card">
+      <h3>🚨 SOS Protection</h3>
+      <p>Emergency alerts for wardens & institutions</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>📊 Digital Logs</h3>
+      <p>Full audit trail for safety compliance</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES PAGE -->
+<section id="services" class="services fade">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Worker Booking</h3>
+      <p>Book verified electricians, plumbers & more</p>
+    </div>
+
+    <div class="card">
+      <h3>QR Entry System</h3>
+      <p>Scan & verify every worker entering premises</p>
+    </div>
+
+    <div class="card">
+      <h3>Safety Dashboard</h3>
+      <p>Track all activity with real-time insights</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOGIN + BOOKING -->
+<section id="account" class="account fade">
+  <h2>Login & Book</h2>
+
+  <div class="box">
+    <h3>Login</h3>
+    <input type="text" placeholder="Email" id="email">
+    <input type="password" placeholder="Password" id="password">
+    <button onclick="login()">Login</button>
+    <p id="loginStatus"></p>
+  </div>
+
+  <div class="box">
+    <h3>Book a Worker</h3>
+    <select id="service">
+      <option>Electrician</option>
+      <option>Plumber</option>
+      <option>Carpenter</option>
+      <option>cleaner</option>
+      <option>cooking services</option>
+    </select>
+
+    <input type="date" id="date">
+    <input type="time" id="time">
+
+    <button onclick="bookSlot()">Confirm Booking</button>
+    <p id="confirmation"></p>
+  </div>
+</section>
+
+<footer>
+  <p>© SafeEntry 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
